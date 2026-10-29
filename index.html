@@ -402,6 +402,917 @@ a:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .card .ph img{filter:grayscale(1) contrast(1.06) brightness(.98)}
 }
+
+
+/* ══════════════════════════════════════════════════
+   MOBILE & TABLET EDITORIAL RESPONSIVE DESIGN (<= 860px)
+   Designed for luxury editorial readability & human touch
+   ══════════════════════════════════════════════════ */
+@media screen and (max-width: 860px) {
+  html {
+    scroll-snap-type: none !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  body {
+    overflow-x: hidden !important;
+    background: #05070A !important;
+  }
+  .deck {
+    --s: 1 !important;
+    overflow-x: hidden !important;
+  }
+  .slot {
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    scroll-snap-align: none !important;
+    background: transparent !important;
+  }
+  .page {
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    transform: none !important;
+    position: relative !important;
+    overflow: visible !important;
+    padding: 36px 20px 52px !important;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .paper.page {
+    border-bottom: 1px solid rgba(11,14,19,.12);
+  }
+
+  /* Navigation dots: hidden on mobile for clean reading flow */
+  .dots {
+    display: none !important;
+  }
+
+  /* Running chrome headers/footers */
+  .chrome {
+    position: static !important;
+    width: 100% !important;
+    font-size: 11.5px !important;
+    letter-spacing: .16em !important;
+    padding-bottom: 14px !important;
+    margin-bottom: 24px !important;
+    border-bottom: 1px solid var(--rule-d);
+  }
+  .paper .chrome {
+    border-bottom-color: var(--rule-l);
+  }
+  .chrome.bot {
+    margin-top: 40px !important;
+    margin-bottom: 0 !important;
+    padding-top: 14px !important;
+    border-top: 1px solid var(--rule-d);
+    border-bottom: none !important;
+  }
+  .paper .chrome.bot {
+    border-top-color: var(--rule-l);
+  }
+
+  /* Section heads and common typography */
+  .s-head {
+    position: static !important;
+    margin-bottom: 22px !important;
+  }
+  .s-head h2 {
+    font-size: clamp(24px, 6.8vw, 34px) !important;
+    line-height: 1.25 !important;
+    letter-spacing: -.035em !important;
+    margin-top: 10px !important;
+  }
+  .eyebrow {
+    font-size: 12px !important;
+    letter-spacing: .2em !important;
+  }
+
+  /* Badges & Byline */
+  .badge, .byme {
+    position: static !important;
+    text-align: left !important;
+    margin: 0 0 24px 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: baseline !important;
+    gap: 10px !important;
+  }
+  .badge .by, .byme .by {
+    font-size: 11px !important;
+    letter-spacing: .18em !important;
+    display: inline-block !important;
+  }
+  .badge .nm, .byme .nm {
+    font-size: 22px !important;
+    margin: 0 !important;
+    font-weight: 800 !important;
+  }
+  .badge .sm, .byme .sm {
+    font-size: 11px !important;
+    padding: 3px 10px !important;
+    margin: 0 !important;
+  }
+
+  /* ───── 01. COVER ───── */
+  .cover {
+    padding-top: 44px !important;
+    padding-bottom: 52px !important;
+  }
+  .cover .crop {
+    display: none !important;
+  }
+  .cover .doc {
+    position: static !important;
+    font-size: 12px !important;
+    letter-spacing: .22em !important;
+    margin-bottom: 24px !important;
+  }
+  .domain-frame {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 44px 18px 40px !important;
+    margin-bottom: 24px !important;
+    border-radius: 20px !important;
+  }
+  .domain-frame .lab {
+    top: -11px !important;
+    left: 20px !important;
+    font-size: 12px !important;
+    letter-spacing: .24em !important;
+    padding: 0 10px !important;
+  }
+  .domain-frame .lab2 {
+    position: static !important;
+    display: block !important;
+    margin-top: 24px !important;
+    font-size: 10.5px !important;
+    letter-spacing: .12em !important;
+    text-align: center !important;
+    line-height: 1.5 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    color: var(--mute-d) !important;
+  }
+  .wordmark {
+    position: static !important;
+    transform: none !important;
+    font-size: clamp(52px, 15vw, 84px) !important;
+    letter-spacing: -.04em !important;
+    line-height: 1 !important;
+  }
+  .wordmark .chip::after {
+    font-size: 11px !important;
+    bottom: -28px !important;
+    letter-spacing: .22em !important;
+  }
+  .legend-cap {
+    position: static !important;
+    margin-top: 20px !important;
+    margin-bottom: 8px !important;
+    font-size: 11px !important;
+    letter-spacing: .2em !important;
+    width: auto !important;
+  }
+  .legend {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    margin-bottom: 28px !important;
+  }
+  .legend div {
+    border: 1px solid var(--rule-d) !important;
+    border-radius: 10px !important;
+    padding: 8px 10px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2px !important;
+  }
+  .legend b {
+    font-size: 28px !important;
+    line-height: 1 !important;
+    width: auto !important;
+  }
+  .legend span {
+    font-size: 11px !important;
+  }
+  .cover .tagline {
+    position: static !important;
+    margin-bottom: 28px !important;
+  }
+  .cover .tagline .en {
+    font-size: clamp(26px, 7.5vw, 38px) !important;
+    line-height: 1.15 !important;
+  }
+  .cover .tagline .ko {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+    line-height: 1.45 !important;
+    margin-top: 10px !important;
+  }
+  .cover .by {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+    padding-top: 20px !important;
+    border-top: 1px solid var(--rule-d) !important;
+  }
+  .cover .byline {
+    text-align: left !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+  .cover .byline small {
+    font-size: 10.5px !important;
+    letter-spacing: .16em !important;
+  }
+  .cover .by .lab {
+    font-size: 13px !important;
+    padding: 6px 14px !important;
+  }
+
+  /* ───── 02. RAW BOOK SUMMARY ───── */
+  .defn {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+    margin-top: 12px !important;
+    padding: 10px 14px !important;
+    background: var(--paper2) !important;
+    border-radius: 10px !important;
+  }
+  .rawtx {
+    position: static !important;
+    column-count: 1 !important;
+    column-gap: 0 !important;
+    margin-top: 18px !important;
+  }
+  .rawtx h4 {
+    font-size: 17px !important;
+    line-height: 1.4 !important;
+    margin: 24px 0 10px 0 !important;
+    padding-top: 12px !important;
+  }
+  .rawtx li {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 8px !important;
+    padding-left: 14px !important;
+  }
+  .rawtx .end {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+    padding: 14px 16px !important;
+    margin-top: 20px !important;
+    border-radius: 12px !important;
+  }
+
+  /* ───── 03. INTENT ───── */
+  .intent .lbl {
+    position: static !important;
+    margin-bottom: 16px !important;
+    font-size: 13px !important;
+  }
+  .flow {
+    position: static !important;
+    width: 100% !important;
+    margin-bottom: 28px !important;
+    border-bottom: none !important;
+  }
+  .flow li {
+    font-size: 15.5px !important;
+    line-height: 1.6 !important;
+    padding: 12px 0 12px 36px !important;
+  }
+  .flow li::before {
+    font-size: 20px !important;
+    top: 10px !important;
+  }
+  .flow li.q {
+    font-size: 17.5px !important;
+    line-height: 1.45 !important;
+    padding: 14px 0 14px 36px !important;
+    margin-top: 8px !important;
+  }
+  .answer {
+    position: static !important;
+    width: 100% !important;
+  }
+  .answer .no {
+    font-size: clamp(44px, 13vw, 72px) !important;
+    line-height: 1 !important;
+  }
+  .answer .turn {
+    font-size: clamp(22px, 6.5vw, 32px) !important;
+    line-height: 1.25 !important;
+    margin-top: 8px !important;
+  }
+  .answer .claim {
+    margin-top: 20px !important;
+    padding: 20px 18px !important;
+    border-radius: 16px !important;
+  }
+  .answer .claim p {
+    font-size: 18px !important;
+    line-height: 1.55 !important;
+  }
+  .answer .claim small {
+    font-size: 14.5px !important;
+    line-height: 1.5 !important;
+    margin-top: 10px !important;
+  }
+  .answer .two {
+    margin-top: 20px !important;
+  }
+  .answer .two .k {
+    font-size: 12px !important;
+  }
+  .answer .two .g {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    margin-top: 8px !important;
+  }
+  .answer .two .g div {
+    padding: 12px 16px !important;
+    border-radius: 12px !important;
+  }
+  .answer .two b {
+    font-size: 28px !important;
+  }
+  .answer .two span {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* ───── 04. ARGUE (3 PARTS) ───── */
+  .parts {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+    margin-top: 16px !important;
+  }
+  .pt {
+    padding-top: 16px !important;
+    border-top: 2px solid var(--ink) !important;
+  }
+  .pt .tg {
+    font-size: 13px !important;
+  }
+  .pt h3 {
+    font-size: 19px !important;
+    line-height: 1.4 !important;
+    margin-top: 6px !important;
+  }
+  .rn {
+    font-size: 16px !important;
+    padding: 0 8px !important;
+  }
+  .qa {
+    margin-top: 14px !important;
+    gap: 14px !important;
+  }
+  .qa dt {
+    font-size: 15.5px !important;
+  }
+  .qa dd {
+    font-size: 14.5px !important;
+    line-height: 1.6 !important;
+    padding-left: 12px !important;
+  }
+  .qa dd .note {
+    font-size: 13px !important;
+    margin-top: 6px !important;
+  }
+  .pt p.tx {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-top: 10px !important;
+  }
+  .types {
+    font-size: 13.5px !important;
+    gap: 6px !important;
+    margin-top: 8px !important;
+  }
+  .types span {
+    font-size: 12.5px !important;
+    padding: 4px 8px !important;
+  }
+  .ten {
+    padding: 12px 14px !important;
+    gap: 12px !important;
+    margin-top: 12px !important;
+    border-radius: 12px !important;
+  }
+  .ten b {
+    font-size: 42px !important;
+  }
+  .ten b small {
+    font-size: 16px !important;
+  }
+  .ten span {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+  .split {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+  .llm {
+    padding: 14px 16px !important;
+    margin-top: 14px !important;
+    border-radius: 14px !important;
+  }
+  .llm .f {
+    font-size: 12px !important;
+  }
+  .llm p {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+  .abil {
+    gap: 8px !important;
+    margin-top: 12px !important;
+  }
+  .abil div {
+    grid-template-columns: 36px 1fr !important;
+    padding: 10px 12px !important;
+    gap: 10px !important;
+    border-radius: 10px !important;
+  }
+  .abil b {
+    font-size: 30px !important;
+  }
+  .abil span {
+    font-size: 14px !important;
+  }
+  .abil span em {
+    font-size: 11px !important;
+  }
+  .any {
+    font-size: 14.5px !important;
+    padding: 12px 16px !important;
+    border-radius: 12px !important;
+    margin-top: 14px !important;
+  }
+
+  /* ───── 05. TITLE & TOC ───── */
+  .toc .head {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    align-items: flex-start !important;
+    margin-bottom: 24px !important;
+  }
+  .wm-sm {
+    font-size: clamp(48px, 13vw, 76px) !important;
+    margin-top: 8px !important;
+  }
+  .toc .head .it {
+    font-size: 20px !important;
+    margin-top: 4px !important;
+  }
+  .toc .head .pitch {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    padding-left: 14px !important;
+    border-left: 3px solid var(--signal) !important;
+    max-width: 100% !important;
+  }
+  .map {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    margin-top: 20px !important;
+    margin-bottom: 28px !important;
+  }
+  .col {
+    padding-top: 16px !important;
+  }
+  .col h3 {
+    font-size: 19px !important;
+    line-height: 1.35 !important;
+  }
+  .col .shift {
+    font-size: 14px !important;
+    margin-top: 4px !important;
+  }
+  .col ol {
+    gap: 10px !important;
+    margin-top: 12px !important;
+  }
+  .col li {
+    grid-template-columns: 28px 1fr !important;
+    padding-top: 8px !important;
+  }
+  .col li b {
+    font-size: 24px !important;
+  }
+  .col li span {
+    font-size: 15px !important;
+    line-height: 1.45 !important;
+  }
+  .col.p4 {
+    margin: 0 !important;
+    padding: 20px 16px !important;
+    border-radius: 16px !important;
+  }
+  .col.p4 .ct {
+    padding-left: 0 !important;
+  }
+  .dom {
+    grid-template-rows: none !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    margin-top: 14px !important;
+  }
+  .dom div {
+    grid-template-columns: 38px 1fr auto !important;
+    padding: 8px 12px !important;
+    border-radius: 10px !important;
+  }
+  .dom .L {
+    font-size: 32px !important;
+  }
+  .dom .t {
+    font-size: 14.5px !important;
+  }
+  .dom .w {
+    font-size: 10.5px !important;
+  }
+  .dom .n {
+    font-size: 12px !important;
+  }
+  .readers {
+    position: static !important;
+    width: 100% !important;
+    margin-top: 24px !important;
+  }
+  .readers .k {
+    font-size: 12px !important;
+  }
+  .readers .g {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+  .readers .g div {
+    padding: 12px 14px !important;
+    border-radius: 12px !important;
+  }
+  .readers b {
+    font-size: 15.5px !important;
+  }
+  .readers span {
+    font-size: 13.5px !important;
+  }
+
+  /* ───── 06. AUTHORS ───── */
+  .authors .head {
+    position: static !important;
+    margin-bottom: 24px !important;
+  }
+  .authors .toprow {
+    flex-direction: column !important;
+    gap: 4px !important;
+    align-items: flex-start !important;
+  }
+  .authors h2 {
+    font-size: clamp(23px, 6.2vw, 32px) !important;
+    white-space: normal !important;
+    line-height: 1.3 !important;
+    margin-top: 10px !important;
+  }
+  .authors .lead {
+    font-size: 14.5px !important;
+    margin-top: 4px !important;
+  }
+  .cards {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+  }
+  .card {
+    border-radius: 20px !important;
+    box-shadow: 0 10px 25px -10px rgba(11,14,19,.12) !important;
+  }
+  .card .ph {
+    height: 240px !important;
+  }
+  .card .ph img {
+    filter: grayscale(0.2) contrast(1.04) brightness(0.98) !important;
+  }
+  .card .cb {
+    padding: 18px 18px 0 !important;
+  }
+  .card h3 {
+    font-size: 28px !important;
+    gap: 8px !important;
+  }
+  .card h3 small {
+    font-size: 16px !important;
+  }
+  .card .role {
+    font-size: 14.5px !important;
+    margin-top: 6px !important;
+  }
+  .card blockquote {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+    margin-top: 10px !important;
+    padding-left: 12px !important;
+  }
+  .card ul {
+    margin-top: 12px !important;
+    gap: 6px !important;
+  }
+  .card li {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    padding-left: 14px !important;
+  }
+  .card .sig {
+    padding: 12px 18px !important;
+    font-size: 12.5px !important;
+    margin-top: 16px !important;
+  }
+
+  /* ───── 07. KSUM (EXCERPTS 1·2) ───── */
+  .ksum .cols2 {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 36px !important;
+    margin-top: 18px !important;
+  }
+  .ch .tg {
+    font-size: 12px !important;
+  }
+  .ch h3 {
+    font-size: 21px !important;
+    line-height: 1.3 !important;
+    margin-top: 6px !important;
+  }
+  .ch .syn {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    padding-left: 14px !important;
+    margin-top: 10px !important;
+  }
+  .ch ol {
+    margin-top: 14px !important;
+  }
+  .ch li {
+    grid-template-columns: 32px 1fr !important;
+    padding: 10px 0 !important;
+    gap: 6px !important;
+  }
+  .ch li b {
+    font-size: 24px !important;
+  }
+  .ch li h5 {
+    font-size: 15.5px !important;
+    line-height: 1.35 !important;
+  }
+  .ch li p {
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    margin-top: 3px !important;
+  }
+
+  /* ───── 08. SAMPLE 01 ───── */
+  .scene {
+    position: static !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+  .scene q {
+    font-size: 17.5px !important;
+    line-height: 1.65 !important;
+  }
+  .thesis {
+    position: static !important;
+    width: 100% !important;
+    padding: 16px 18px !important;
+    border-radius: 14px !important;
+    margin-bottom: 24px !important;
+  }
+  .thesis .k {
+    font-size: 12px !important;
+  }
+  .thesis p {
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+  }
+  .chart {
+    position: static !important;
+    width: 100% !important;
+    padding: 20px 16px !important;
+    border-radius: 18px !important;
+    margin-bottom: 24px !important;
+  }
+  .chart .k {
+    font-size: 12px !important;
+  }
+  .chart h4 {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+  }
+  .chart .q {
+    font-size: 13.5px !important;
+  }
+  .cols {
+    gap: 8px !important;
+    margin-top: 14px !important;
+  }
+  .cols .bars {
+    height: 130px !important;
+    gap: 8px !important;
+  }
+  .bar {
+    width: 32px !important;
+  }
+  .bar em {
+    font-size: 14px !important;
+    top: -22px !important;
+  }
+  .cols .lab span {
+    width: 32px !important;
+    font-size: 11px !important;
+  }
+  .cols .x {
+    font-size: 26px !important;
+  }
+  .cols small {
+    font-size: 12px !important;
+  }
+  .chart .note {
+    font-size: 11.5px !important;
+  }
+  .dead {
+    position: static !important;
+    width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+  .dead .k {
+    font-size: 12px !important;
+  }
+  .dead ul {
+    gap: 8px !important;
+    margin-top: 8px !important;
+  }
+  .dead li {
+    font-size: 13.5px !important;
+    padding: 6px 12px !important;
+  }
+  .dead p {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    margin-top: 10px !important;
+  }
+  .pivot {
+    position: static !important;
+    height: auto !important;
+    padding: 20px 18px !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: flex-start !important;
+    margin-top: 20px !important;
+  }
+  .pivot .big {
+    font-size: 19px !important;
+    line-height: 1.4 !important;
+  }
+  .pivot .after {
+    font-size: 14px !important;
+    padding-left: 14px !important;
+    border-left: 2px solid rgba(11,14,19,.5) !important;
+  }
+
+  /* ───── 09. SAMPLE 02 ───── */
+  .vs {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    margin-bottom: 24px !important;
+  }
+  .vs .mid {
+    display: inline-block !important;
+    align-self: center !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: var(--signal) !important;
+    padding: 2px 14px !important;
+    border: 1px solid var(--rule-d) !important;
+    border-radius: 99px !important;
+    margin: 4px 0 !important;
+  }
+  .vs .k {
+    font-size: 12px !important;
+  }
+  .vs .big {
+    font-size: clamp(40px, 11vw, 60px) !important;
+    line-height: 1 !important;
+  }
+  .vs .big small {
+    font-size: 18px !important;
+  }
+  .vs p {
+    font-size: 14.5px !important;
+    line-height: 1.55 !important;
+  }
+  .duo {
+    position: static !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    margin-bottom: 24px !important;
+  }
+  .who {
+    padding: 18px 18px 20px !important;
+    border-radius: 16px !important;
+  }
+  .who .ic {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .who .k {
+    font-size: 11.5px !important;
+  }
+  .who h4 {
+    font-size: 22px !important;
+  }
+  .who .sub {
+    font-size: 14px !important;
+  }
+  .who ul {
+    margin-top: 12px !important;
+    gap: 8px !important;
+  }
+  .who li {
+    font-size: 14.5px !important;
+    line-height: 1.5 !important;
+    padding-left: 16px !important;
+  }
+  .eye {
+    position: static !important;
+    width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+  .eye .k {
+    font-size: 12px !important;
+  }
+  .eye h4 {
+    font-size: 20px !important;
+    line-height: 1.35 !important;
+  }
+  .eye p {
+    font-size: 14.5px !important;
+    line-height: 1.6 !important;
+  }
+  .field {
+    padding: 14px 16px !important;
+    border-radius: 14px !important;
+    margin-top: 14px !important;
+  }
+  .field q {
+    font-size: 14.5px !important;
+    line-height: 1.6 !important;
+  }
+  .field cite {
+    font-size: 11.5px !important;
+  }
+  .s5 .foot {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: flex-start !important;
+    margin-top: 24px !important;
+    padding-top: 18px !important;
+  }
+  .s5 .foot .th {
+    font-size: 19px !important;
+    line-height: 1.35 !important;
+  }
+  .s5 .foot .nx {
+    font-size: 14.5px !important;
+    line-height: 1.5 !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -914,34 +1825,84 @@ a:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
 <nav class="dots" aria-label="페이지 이동"></nav>
 <script>
 (function(){
-  var root=document.documentElement; root.classList.add('js');
-  var deck=document.getElementById('deck'), slots=[].slice.call(deck.querySelectorAll('.slot'));
-  function fit(){
-    var s=Math.min(innerWidth/1920, innerHeight/1080);
-    if(innerWidth<innerHeight) s=innerWidth/1920;
+  var root = document.documentElement;
+  root.classList.add('js');
+  var deck = document.getElementById('deck');
+  var slots = [].slice.call(deck.querySelectorAll('.slot'));
+
+  function isMobile() {
+    return window.innerWidth <= 860;
+  }
+
+  function fit() {
+    if (isMobile()) {
+      deck.style.removeProperty('--s');
+      return;
+    }
+    var s = Math.min(innerWidth / 1920, innerHeight / 1080);
+    if (innerWidth < innerHeight) s = innerWidth / 1920;
     deck.style.setProperty('--s', s.toFixed(4));
   }
-  fit(); addEventListener('resize',fit);
-  var nav=document.querySelector('.dots');
-  slots.forEach(function(sl,i){
-    var a=document.createElement('a'); a.href='#p'+(i+1); a.setAttribute('aria-label',(i+1)+'쪽');
-    a.addEventListener('click',function(e){e.preventDefault(); sl.scrollIntoView({behavior:'smooth'})}); nav.appendChild(a);
-  });
-  var dots=[].slice.call(nav.children);
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){
-      var pg=e.target.querySelector('.page');
-      if(e.isIntersecting){ pg.classList.add('in'); dots.forEach(function(d,k){d.classList.toggle('on', slots[k]===e.target)}) }
+  fit();
+  addEventListener('resize', fit);
+
+  var nav = document.querySelector('.dots');
+  slots.forEach(function(sl, i) {
+    var a = document.createElement('a');
+    a.href = '#p' + (i + 1);
+    a.setAttribute('aria-label', (i + 1) + '장');
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      sl.scrollIntoView({ behavior: 'smooth' });
     });
-  },{threshold:.55});
-  slots.forEach(function(s){io.observe(s)});
-  addEventListener('keydown',function(e){
-    var k=e.key; if(['ArrowDown','PageDown',' '].indexOf(k)<0 && ['ArrowUp','PageUp'].indexOf(k)<0) return;
-    var cur=0, mid=innerHeight/2; slots.forEach(function(s,i){var r=s.getBoundingClientRect(); if(r.top<=mid) cur=i});
-    var nx=(k==='ArrowUp'||k==='PageUp')?cur-1:cur+1; if(nx<0||nx>=slots.length) return;
-    e.preventDefault(); slots[nx].scrollIntoView({behavior:'smooth'});
+    nav.appendChild(a);
   });
-  if(matchMedia('print').matches) slots.forEach(function(s){s.querySelector('.page').classList.add('in')});
+  var dots = [].slice.call(nav.children);
+
+  var io = new IntersectionObserver(function(es) {
+    es.forEach(function(e) {
+      var pg = e.target.querySelector('.page');
+      if (e.isIntersecting) {
+        pg.classList.add('in');
+        dots.forEach(function(d, k) {
+          d.classList.toggle('on', slots[k] === e.target);
+        });
+      }
+    });
+  }, { threshold: isMobile() ? 0.08 : 0.45 });
+
+  slots.forEach(function(s) { io.observe(s); });
+
+  // On initial load, immediately reveal first slides if visible
+  slots.forEach(function(s) {
+    var r = s.getBoundingClientRect();
+    if (r.top < window.innerHeight * 0.9) {
+      var pg = s.querySelector('.page');
+      if (pg) pg.classList.add('in');
+    }
+  });
+
+  addEventListener('keydown', function(e) {
+    if (isMobile()) return;
+    var k = e.key;
+    if (['ArrowDown', 'PageDown', ' '].indexOf(k) < 0 && ['ArrowUp', 'PageUp'].indexOf(k) < 0) return;
+    var cur = 0, mid = innerHeight / 2;
+    slots.forEach(function(s, i) {
+      var r = s.getBoundingClientRect();
+      if (r.top <= mid) cur = i;
+    });
+    var nx = (k === 'ArrowUp' || k === 'PageUp') ? cur - 1 : cur + 1;
+    if (nx < 0 || nx >= slots.length) return;
+    e.preventDefault();
+    slots[nx].scrollIntoView({ behavior: 'smooth' });
+  });
+
+  if (matchMedia('print').matches) {
+    slots.forEach(function(s) {
+      var pg = s.querySelector('.page');
+      if (pg) pg.classList.add('in');
+    });
+  }
 })();
 </script>
 </body>
